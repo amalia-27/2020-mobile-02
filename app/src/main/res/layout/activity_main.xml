@@ -6,13 +6,122 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/red_rectangle"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageView
+        android:id="@+id/image2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="@+id/image1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/futura_pt_demibold"
+        android:text="Welcome back"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        app:layout_constraintHorizontal_bias="0.201"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/image1" />
+
+    <TextView
+        android:id="@+id/text_welcome2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/futura_pt_demibold"
+        android:text="at largest Services marketplace"
+        android:textColor="#000000"
+        android:textSize="19sp"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_welcome" />
+
+    <TextView
+        android:id="@+id/text_enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/futura_pt_demibold"
+        android:text="Enter as a"
+        android:textSize="17sp"
+        app:layout_constraintHorizontal_bias="0.109"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_welcome2" />
+
+    <Button
+        android:id="@+id/btn_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/btn_red_large"
+        android:fontFamily="@font/futura_pt_demibold"
+        android:text="User"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_enter" />
+
+    <Button
+        android:id="@+id/btn_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/btn_white_large"
+        android:fontFamily="@font/futura_pt_demibold"
+        android:text="service provider"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="	#FF0000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_user"
+        android:onClick="postLogin"/>
+
+    <TextView
+        android:id="@+id/enter_as"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/futura_pt_demibold"
+        android:text="Enter as a guest"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_service" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="350dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/red_rectangle"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="@+id/image1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_continue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="340dp"
+        android:fontFamily="@font/futura_pt_demibold"
+        android:text="Continuing as"
+        android:textColor="#000000"
+        android:textSize="35sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/futura_pt_demibold"
+        android:text="Service Provider"
+        android:textColor="#000000"
+        android:textSize="35sp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="@+id/text_continue"
+        app:layout_constraintTop_toBottomOf="@+id/text_continue" />
+
+    <Button
+        android:id="@+id/button_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/btn_red_medium"
+        android:fontFamily="@font/futura_pt_demibold"
+        android:text="Register"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/text_service"
+        android:onClick="postRegister"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_white_small"
+        android:fontFamily="@font/futura_pt_demibold"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textColor="#FF0000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/button_register"
+        app:layout_constraintStart_toStartOf="@+id/text_service"
+        app:layout_constraintTop_toBottomOf="@id/text_service" />
+
+    <FrameLayout
+        android:id="@+id/btn_user"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_white_large"
+        app:layout_constraintEnd_toEndOf="@+id/button_register"
+        app:layout_constraintStart_toStartOf="@+id/btn_login"
+        app:layout_constraintTop_toBottomOf="@id/btn_login">
+
+        <ImageView
+            android:id="@+id/logo_google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/google_logo" />
+
+        <TextView
+            android:id="@+id/text_google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="68dp"
+            android:fontFamily="@font/futura_pt_demibold"
+            android:text="Continue with Google"
+            android:textColor="#FF0000"
+            android:textSize="18sp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/btn_user2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_white_large"
+        app:layout_constraintEnd_toEndOf="@+id/button_register"
+        app:layout_constraintStart_toStartOf="@+id/btn_login"
+        app:layout_constraintTop_toBottomOf="@id/btn_user">
+
+        <ImageView
+            android:id="@+id/logo_facebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/fb_logo" />
+
+        <TextView
+            android:id="@+id/text_fb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/futura_pt_demibold"
+            android:text="Continue with facebook"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="#0000FF"
+            android:textSize="18sp" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/text_guest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter as a guest"
+        android:textSize="18sp"
+        android:fontFamily="@font/futura_pt_demibold"
+        app:layout_constraintTop_toBottomOf="@id/btn_user2"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
